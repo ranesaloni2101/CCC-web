@@ -73,10 +73,15 @@ header {
 }
 
 .answer {
-  display: none;
-  margin-top: 8px;
-  color: green;
+  display: block;              /* FORCE VISIBILITY */
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #ecfdf5;
+  color: #065f46;
+  border-left: 4px solid #22c55e;
+  font-size: 16px;
 }
+
    
 /* BUTTONS */
 button {
@@ -155,3 +160,4 @@ button:hover {
     font-size: 13px;
   }
 }
+
