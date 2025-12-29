@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Fundamentals – CCC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* HEADER */
+.topic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f2937;
+  color: white;
+  padding: 15px 20px;
+}
+
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.exit-btn {
+  background: #2563eb;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* MAIN CONTENT */
+.topic-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* QA CARD */
+.qa-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.qa-card h3 {
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.answer {
+  padding-left: 12px;
+  border-left: 4px solid #22c55e;
+  font-size: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .topic-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .logo{
+    width: 340px;
+    height: 100px;
+  }
+}
+
+</style>
+<body>
+
+<!-- HEADER -->
+<header class="topic-header">
+    <img src="logo.jpeg" class="logo">
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="topic-content">
+<div>
+      <h1>Computer Fundamentals</h1>
+      <span>CCC Exam | Topic-wise Questions & Answers</span>
+    </div>
+  <div class="qa-card">
+    <h3>Q1. What is Internet? </h3>
+    <p class="answer">Network of networks </p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q2. What is WWW? </h3>
+    <p class="answer">World Wide Web</p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q3. What is a website?</h3>
+    <p class="answer">Collection of web pages </p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q4. Example of web browser? </h3>
+    <p class="answer">Google Chrome </p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q5.	What is URL?  </h3>
+    <p class="answer">Uniform Resource Locator</p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q6.	What is email?</h3>
+    <p class="answer">Electronic mail</p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q7.	Example of email service?</h3>
+    <p class="answer">Gmail</p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q8.	What is inbox?</h3>
+    <p class="answer">Folder for received emails</p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q9.	What is attachment? </h3>
+    <p class="answer">File sent with email</p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q10. What does CC mean in email? </h3>
+    <p class="answer">Carbon Copy</p>
+  </div>
+
+</main>
+<a href="index.html" class="exit-btn">Back to Topics</a>
+<img src="logo1.png" alt="" class="logo1">
+<footer class="fixed-footer">
+  <nav class="footer-menu">
+    <a href="index.html">🏠 Home</a>
+    <a href="index.html#topics">📘 Topics</a>
+    <a href="#">ℹ️ About</a>
+    <a href="#">📞 Contact</a>
+  </nav>
+</footer>
+</body>
+</html>
