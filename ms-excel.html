@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Fundamentals – CCC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* HEADER */
+.topic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f2937;
+  color: white;
+  padding: 15px 20px;
+}
+
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.exit-btn {
+  background: #2563eb;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* MAIN CONTENT */
+.topic-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* QA CARD */
+.qa-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.qa-card h3 {
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.answer {
+  padding-left: 12px;
+  border-left: 4px solid #22c55e;
+  font-size: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .topic-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .logo{
+    width: 340px;
+    height: 100px;
+  }
+}
+
+</style>
+<body>
+
+<!-- HEADER -->
+<header class="topic-header">
+    <img src="logo.jpeg" class="logo">
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="topic-content">
+<div>
+      <h1>Computer Fundamentals</h1>
+      <span>CCC Exam | Topic-wise Questions & Answers</span>
+    </div>
+  <div class="qa-card">
+    <h3>Q1. Excel is used for?</h3>
+    <p class="answer">Calculations and data analysis </p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q2. Default extension of Excel file?</h3>
+    <p class="answer">.xlsx </p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q3. What is a cell? </h3>
+    <p class="answer">Intersection of row and column</p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q4. Example of cell address?</h3>
+    <p class="answer">A1</p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q5.	What is a worksheet? </h3>
+    <p class="answer">Sheet containing data</p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q6.	What is a workbook?</h3>
+    <p class="answer">Collection of worksheets </p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q7.	Which symbol starts a formula?</h3>
+    <p class="answer"> =  </p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q8.	Formula for addition? </h3>
+    <p class="answer">=SUM() </p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q9.	Function to find average?</h3>
+    <p class="answer">=AVERAGE() </p>
+  </div>
+
+  <div class="qa-card">
+    <h3>Q10. Shortcut to edit cell?</h3>
+    <p class="answer">F2 </p>
+  </div>
+
+</main>
+<a href="index.html" class="exit-btn">Back to Topics</a>
+
+<img src="logo1.png" alt="" class="logo1">
+<footer class="fixed-footer">
+  <nav class="footer-menu">
+    <a href="index.html">🏠 Home</a>
+    <a href="index.html#topics">📘 Topics</a>
+    <a href="#">ℹ️ About</a>
+    <a href="#">📞 Contact</a>
+  </nav>
+</footer>
+</body>
+</html>
