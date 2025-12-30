@@ -6,83 +6,10 @@
   <title>MS PowerPoint – CCC</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<style>
-  body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  color: #333;
-}
-
-/* HEADER */
-.topic-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1f2937;
-  color: white;
-  padding: 15px 20px;
-}
-
-
-.logo {
-  width: 48px;
-  height: 48px;
-}
-
-.exit-btn {
-  background: #2563eb;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-/* MAIN CONTENT */
-.topic-content {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* QA CARD */
-.qa-card {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.qa-card h3 {
-  margin-bottom: 10px;
-  color: #1f2937;
-}
-
-.answer {
-  padding-left: 12px;
-  border-left: 4px solid #22c55e;
-  font-size: 16px;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .topic-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .logo{
-    width: 340px;
-    height: 100px;
-  }
-}
-
-</style>
 <body>
 
 <!-- HEADER -->
-<header class="topic-header">
+<header class="site-header">
     <img src="logo.jpeg" class="logo">
 </header>
 
@@ -191,16 +118,18 @@
     <h3>Q20. Slide sorter view shows</h3>
     <p class="answer">All slides</p>
   </div>
+  <a href="index.html" class="exit-btn">⬅ Back to Topics</a>
+<!-- Bottom Logo -->
+  <div class="footer-logo">
+    <img src="logo1.jpeg" alt="Footer Logo">
+  </div>
 </main>
-<a href="index.html" class="exit-btn">Back to Topics</a>
 
-<img src="logo1.jpeg" alt="" class="logo1">
-<footer class="fixed-footer">
-  <nav class="footer-menu">
-    <a href="index.html">🏠 Home</a>
-    <a href="index.html#topics">📘 Topics</a>
-    <a href="#">ℹ️ About</a>
-    <a href="#">📞 Contact</a>
+<footer class="site-footer">
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">CONTACT</a>
   </nav>
 </footer>
 </body>
