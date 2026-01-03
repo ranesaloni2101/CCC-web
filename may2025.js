@@ -103,7 +103,196 @@ const currentQuiz = [
       "Hexadecimal"
     ],
     answer: 2
+  },
+  {
+    question: "OS acts as an interface between:  ",
+    options: [
+      "User & Hardware",
+      "Software & Software",
+      "User & User",
+      "Internet & User "
+    ],
+    answer: 0
+  },
+  {
+    question: "Shortcut to open Task Manager:",
+    options: [
+      "Ctrl + T",
+      "Ctrl + Shift + Esc",
+      "Alt + F4",
+      "Ctrl + Alt + P"
+    ],
+    answer: 1
+  },
+  {
+    question: "File deleted normally goes to: ",
+    options: [
+      "Control Panel ",
+      "Desktop",
+      "Recycle Bin",
+      "Drive C "
+    ],
+    answer: 2
+  },
+  {
+    question: "Ctrl + C is used for: ",
+    options: [
+      "Cut",
+      "Copy",
+      "Paste",
+      "Close"
+    ],
+    answer: 1
+  },
+  {
+    question: "Ctrl + X is used for: ",
+    options: [
+      "Copy",
+      "Cut",
+      "Paste",
+      "Undo"
+    ],
+    answer: 1
+  },
+  {
+    question: "Shortcut for permanent delete:  ",
+    options: [
+      "Delete",
+      "Ctrl + Delete",
+      "Shift + Delete",
+      "Alt + Delete"
+    ],
+    answer: 2
+  },
+  {
+    question: "Windows Explorer is used for: ",
+    options: [
+      "Internet",
+      "File Management",
+      "Email",
+      "Antivirus"
+    ],
+    answer: 1
+  },
+  {
+    question: "Extension of executable file: ",
+    options: [
+      ".docx ",
+      ".xlsx",
+      ".exe",
+      ".pptx "
+    ],
+    answer: 2
+  },
+  {
+    question: "Booting means:",
+    options: [
+      "Shutdown",
+      "Restart",
+      "Starting computer",
+      "Formatting"
+    ],
+    answer: 2
+  },
+  {
+    question: "Writer is used for: ",
+    options: [
+      "Calculation",
+      "Presentation",
+      "Word Processing ",
+      "Drawing"
+    ],
+    answer: 2
+  },
+  {
+    question: "Shortcut to save document:",
+    options: [
+      "Ctrl + A",
+      "Ctrl + S",
+      "Ctrl + P",
+      "Ctrl + D"
+    ],
+    answer: 1
+  },
+  {
+    question: "Ctrl + B is for:",
+    options: [
+      "Bold",
+      "Italic",
+      "Underline",
+      "Break"
+    ],
+    answer: 0
+  },
+  {
+    question: "Ctrl + I is for:",
+    options: [
+      "Indent",
+      "Italic",
+      "Insert",
+      "Index "
+    ],
+    answer: 1
+  },
+  {
+    question: "Ctrl + U is for:",
+    options: [
+      "Uppercase",
+      "Undo",
+      "Underline",
+      "Update"
+    ],
+    answer: 2
+  },
+  {
+    question: "Header appears at:",
+    options: [
+      "Bottom",
+      "Top",
+      "Middle",
+      "Margin"
+    ],
+    answer: 1
+  },
+  {
+    question: "Footer appears at:",
+    options: [
+      "Bottom",
+      "Top",
+      "Center",
+      "Side"
+    ],
+    answer: 0
+  },
+  {
+    question: "Page Break shortcut:",
+    options: [
+      "Ctrl + B",
+      "Ctrl + Enter",
+      "Ctrl + Shift",
+      "Ctrl + P"
+    ],
+    answer: 1
+  },
+  {
+    question: "Spell check shortcut:",
+    options: [
+      "F2",
+      "F5",
+      "F7",
+      "F9"
+    ],
+    answer: 2
+  },
+  {
+    question: "Default file extension of Writer:",
+    options: [
+      ".doc",
+      ".odt ",
+      ".txt",
+      ".pdf"
+    ],
+    answer: 1
   }
 ];
-
-loadQuiz(currentQuiz);
+loadQuiz(currentQuiz)
