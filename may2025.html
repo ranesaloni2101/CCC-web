@@ -8,24 +8,48 @@
 </head>
 
 <body>
-    <header class="site-header">
+
+<!-- HEADER -->
+<header class="site-header">
   <img src="logo.jpeg" alt="Logo" class="logo">
 </header>
-<div class="container">
-  <h1>📄 May 2025 CCC Paper</h1>
 
-  <div id="quiz"></div>
+<!-- MAIN EXAM AREA -->
+<main class="exam-wrapper">
+  <div class="container">
 
-  <button onclick="submitExam()">Submit Exam</button>
-  <div id="result"></div>
+    <!-- EXAM TITLE -->
+    <section class="exam-header">
+      <h1>📄 May 2025 – CCC Examination</h1>
+      <p class="exam-subtitle">
+        Answer all questions. Each question carries equal marks.
+      </p>
+    </section>
 
-  <br>
-  <a href="index.html">⬅ Back to Home</a>
-  <div class="footer-logo">
-    <img src="logo1.jpeg" alt="Footer Logo">
+    <!-- QUIZ -->
+    <section class="exam-body">
+      <div id="quiz"></div>
+    </section>
+
+    <!-- ACTIONS -->
+    <section class="exam-actions">
+      <button class="submit-btn" onclick="submitExam()">Submit Exam</button>
+      <div id="result"></div>
+    </section>
+
+    <!-- NAVIGATION -->
+    <section class="exam-footer">
+      <a href="index.html" class="back-link">⬅ Back to Home</a>
+
+      <div class="footer-logo">
+        <img src="logo1.jpeg" alt="Footer Logo">
+      </div>
+    </section>
+
   </div>
-</div>
+</main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <nav>
     <a href="index.html">HOME</a>
@@ -33,7 +57,10 @@
     <a href="#">CONTACT</a>
   </nav>
 </footer>
+
+<!-- SCRIPTS -->
 <script src="exam.js"></script>
 <script src="may2025.js"></script>
+
 </body>
 </html>
