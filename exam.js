@@ -23,26 +23,52 @@ function loadQuiz(quizData) {
 function submitExam() {
   let score = 0;
 
+  const allQuestions = document.querySelectorAll(".question");
+
   currentQuiz.forEach((q, index) => {
+    const questionDiv = allQuestions[index];
     const options = document.querySelectorAll(`input[name="q${index}"]`);
-    options.forEach(opt => {
-      const label = opt.parentElement;
+
+    let isAnswered = false;
+    let isCorrect = false;
+
+    options.forEach(input => {
+      const label = input.parentElement;
       label.classList.remove("correct", "wrong");
 
-      if (parseInt(opt.value) === q.answer) {
+      // mark correct option
+      if (parseInt(input.value) === q.answer) {
         label.classList.add("correct");
       }
 
-      if (opt.checked && parseInt(opt.value) !== q.answer) {
-        label.classList.add("wrong");
-      }
-
-      if (opt.checked && parseInt(opt.value) === q.answer) {
-        score++;
+      if (input.checked) {
+        isAnswered = true;
+        if (parseInt(input.value) === q.answer) {
+          isCorrect = true;
+          score++;
+        } else {
+          label.classList.add("wrong");
+        }
       }
     });
+
+    // remove old states
+    questionDiv.classList.remove(
+      "correct-question",
+      "wrong-question",
+      "unanswered-question"
+    );
+
+    // apply new state
+    if (!isAnswered) {
+      questionDiv.classList.add("unanswered-question");
+    } else if (isCorrect) {
+      questionDiv.classList.add("correct-question");
+    } else {
+      questionDiv.classList.add("wrong-question");
+    }
   });
 
   document.getElementById("result").innerText =
-    `Score: ${score} / ${currentQuiz.length}`;
+    `Your Score: ${score} / ${currentQuiz.length}`;
 }
