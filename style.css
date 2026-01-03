@@ -180,3 +180,204 @@ h1 {
   text-decoration: none;
   border-radius: 6px;
 }
+
+.card {
+  background: white;
+  margin: 15px 0;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.card a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a237e;
+  display: block;
+}
+
+/* EXAM */
+.question {
+  border: 2px solid #ddd;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.options label {
+  display: block;
+  background: #eef2ff;
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.correct {
+  background: #c8e6c9 !important;
+}
+
+.wrong {
+  background: #ffcdd2 !important;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.section {
+  margin-top: 40px;
+}
+
+.section-title {
+  color: #1a237e;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.paper-card {
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  color: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* Exam Page Layout */
+.exam-wrapper {
+  background: #f4f6fb;
+  padding: 30px 0;
+}
+
+.exam-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.exam-header h1 {
+  font-size: 30px;
+  color: #1a237e;
+}
+
+.exam-subtitle {
+  color: #555;
+  font-size: 15px;
+}
+
+/* Quiz area */
+.exam-body {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Actions */
+.exam-actions {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.submit-btn {
+  background: #1a237e;
+  color: white;
+  padding: 14px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #0d1445;
+}
+
+#result {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Footer navigation */
+.exam-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .exam-header h1 {
+    font-size: 22px;
+  }
+
+  .exam-body {
+    padding: 15px;
+  }
+}
+
+/* Question highlight */
+.question {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  background: #ffffff;
+  color: #1a237e;
+}
+
+/* Question result states */
+.question.correct-question {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+}
+
+.question.wrong-question {
+  border-color: #c62828;
+  background: #ffebee;
+}
+.question.unanswered-question {
+  background: #fff8e1;
+  border-color: #f9a825;
+}
+/* Optional question number highlight */
+.question p {
+  font-weight: bold;
+}
