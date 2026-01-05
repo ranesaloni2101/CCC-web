@@ -27,7 +27,7 @@
     <h2 class="section-title">📂 Topic-wise Practice</h2>
 
     <div class="topics-grid">
-      <a href="computer-fundamentals.html" class="topic-card">Computer Fundamentals (10)</a>
+      <a href="computer-fundamentals.html" class="topic-card">Computer Fundamentals (20)</a>
       <a href="input-output.html" class="topic-card">Input, Output & Storage Devices (10)</a>
       <a href="operating-system.html" class="topic-card">Operating System & Windows (20)</a>
       <a href="ms-word.html" class="topic-card">MS Word (20)</a>
@@ -37,7 +37,6 @@
       <a href="cyber-security.html" class="topic-card">Digital Payment & Cyber Security (30)</a>
       <a href="e-governance.html" class="topic-card">E-Governance & Miscellaneous (20)</a>
       <a href="general-awareness.html" class="topic-card">General Awareness (10)</a>
-      <a href="computer-basics.html" class="topic-card">Computer Basics (10)</a>
     </div>
   </section>
 
@@ -52,21 +51,49 @@
     </div>
   </section>
 
-  <!-- FOOTER LOGO -->
-  <div class="footer-logo">
-    <img src="logo1.jpeg" alt="Footer Logo">
-  </div>
+  
 
 </main>
-
 <!-- FOOTER -->
 <footer class="site-footer">
+  <!-- FOOTER LOGO -->
+   <div class="footer-logo" id="footerLogo">
+    <img src="logo1.jpeg" alt="Footer Logo">
+  </div>
   <nav>
     <a href="index.html">HOME</a>
     <a href="#">ABOUT</a>
     <a href="#">CONTACT</a>
   </nav>
 </footer>
+<div class="floating-pill refer-pill">
+  🎁 Refer & Earn
+</div>
+
+<div class="floating-pill job-pill">
+  💼 Job Placement
+</div>
+
+<script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const footerLogo = document.getElementById("footerLogo");
+
+    if (!footerLogo) return;
+
+    window.addEventListener("scroll", function () {
+      const scrollBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 50;
+
+      if (scrollBottom) {
+        footerLogo.classList.add("show");
+      } else {
+        footerLogo.classList.remove("show");
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
