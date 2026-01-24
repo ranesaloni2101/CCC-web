@@ -12,6 +12,17 @@
 <header class="site-header">
   <img src="logo.jpeg" alt="Logo" class="logo">
 </header>
+<div id="loginModal" class="login-modal">
+  <div class="login-box">
+    <h2>Student Login</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+  </div>
+</div>
 
 <!-- MAIN CONTENT -->
 <main class="container">
@@ -94,8 +105,34 @@
     });
   });
 </script>
+<script>
+window.onload = function () {
+  if (localStorage.getItem("cccLoggedIn") !== "true") {
+    document.getElementById("loginModal").style.display = "block";
+  }
+};
+</script>
+<script>
+function login() {
+  const user = document.getElementById("username").value.trim();
+  const pass = document.getElementById("password").value.trim();
+  const msg = document.getElementById("loginMsg");
 
+  if (user === "student" && pass === "1234") {
+    localStorage.setItem("cccLoggedIn", "true");
+    localStorage.setItem("cccUser", user);
+
+    msg.style.color = "green";
+    msg.innerText = "Login successful!";
+
+    setTimeout(() => {
+      document.getElementById("loginModal").style.display = "none";
+    }, 800);
+  } else {
+    msg.style.color = "red";
+    msg.innerText = "Invalid username or password";
+  }
+}
+</script>
 </body>
 </html>
-
-
