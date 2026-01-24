@@ -11,6 +11,7 @@
 <!-- HEADER -->
 <header class="site-header">
   <img src="logo.jpeg" alt="Logo" class="logo">
+  <button onclick="logout()">Logout</button>
 </header>
 <div id="loginModal" class="login-modal">
   <div class="login-box">
@@ -111,14 +112,27 @@ window.onload = function () {
     document.getElementById("loginModal").style.display = "block";
   }
 };
-</script>
-<script>
+  if (!localStorage.getItem("cccUsers")) {
+  const users = [
+    { username: "student1", password: "1234" },
+    { username: "student2", password: "abcd" },
+    { username: "student3", password: "1111" },
+    { username: "admin", password: "admin123" }
+  ];
+  localStorage.setItem("cccUsers", JSON.stringify(users));
+}
 function login() {
   const user = document.getElementById("username").value.trim();
   const pass = document.getElementById("password").value.trim();
   const msg = document.getElementById("loginMsg");
 
-  if (user === "student" && pass === "1234") {
+  const users = JSON.parse(localStorage.getItem("cccUsers")) || [];
+
+  const validUser = users.find(
+    u => u.username === user && u.password === pass
+  );
+
+  if (validUser) {
     localStorage.setItem("cccLoggedIn", "true");
     localStorage.setItem("cccUser", user);
 
@@ -132,6 +146,12 @@ function login() {
     msg.style.color = "red";
     msg.innerText = "Invalid username or password";
   }
+}
+
+function logout() {
+  localStorage.removeItem("cccLoggedIn");
+  localStorage.removeItem("cccUser");
+  location.reload();
 }
 </script>
 </body>
