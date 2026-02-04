@@ -416,3 +416,94 @@ button {
 .question p {
   font-weight: bold;
 }
+/* ===== Login Modal Background ===== */
+.login-modal{
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Login Card ===== */
+.login-card{
+  background: #ffffff;
+  width: 340px;
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ===== Logo ===== */
+.login-logo{
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+/* ===== Heading ===== */
+.login-card h2{
+  margin: 5px 0;
+  font-size: 22px;
+  color: #222;
+}
+
+.login-sub{
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* ===== Inputs ===== */
+.input-group{
+  margin-bottom: 15px;
+}
+
+.input-group input{
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input-group input:focus{
+  border-color: #2c5364;
+  box-shadow: 0 0 0 2px rgba(44,83,100,0.2);
+}
+
+/* ===== Button ===== */
+.login-btn{
+  width: 100%;
+  padding: 11px;
+  background: #2c5364;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover{
+  background: #203a43;
+}
+
+/* ===== Message ===== */
+.login-msg{
+  margin-top: 12px;
+  font-size: 14px;
+  height: 18px;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn{
+  from{ transform: translateY(-15px); opacity:0; }
+  to{ transform: translateY(0); opacity:1; }
+}
