@@ -14,16 +14,26 @@
   <button onclick="logout()">Logout</button>
 </header>
 <div id="loginModal" class="login-modal">
-  <div class="login-box">
+  <div class="login-card">
+    <img src="logo.jpeg" class="login-logo" alt="Logo">
+
     <h2>Student Login</h2>
+    <p class="login-sub">CCC Exam Practice Portal</p>
 
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
+    <div class="input-group">
+      <input type="text" id="username" placeholder="Username">
+    </div>
 
-    <button onclick="login()">Login</button>
-    <p id="loginMsg"></p>
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Password">
+    </div>
+
+    <button class="login-btn" onclick="login()">Login</button>
+
+    <p id="loginMsg" class="login-msg"></p>
   </div>
 </div>
+
 
 <!-- MAIN CONTENT -->
 <main class="container">
@@ -86,40 +96,47 @@
   💼 Job Placement
 </div>
 
-<script src="script.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const footerLogo = document.getElementById("footerLogo");
+/* ---------- RUN FIRST (no DOM dependency) ---------- */
 
-    if (!footerLogo) return;
+// Create default users ONLY ONCE
+(function initUsers() {
+  if (!localStorage.getItem("cccUsers")) {
+    const users = [
+      { username: "student1", password: "1234" },
+      { username: "student2", password: "abcd" },
+      { username: "student3", password: "1111" },
+      { username: "admin", password: "admin123" }
+    ];
+    localStorage.setItem("cccUsers", JSON.stringify(users));
+  }
+})();
 
-    window.addEventListener("scroll", function () {
-      const scrollBottom =
-        window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight - 50;
+/* ---------- After DOM loads ---------- */
+document.addEventListener("DOMContentLoaded", function () {
 
-      if (scrollBottom) {
-        footerLogo.classList.add("show");
-      } else {
-        footerLogo.classList.remove("show");
-      }
-    });
+  const modal = document.getElementById("loginModal");
+
+  // If NOT logged in → show modal
+  if (localStorage.getItem("cccLoggedIn") !== "true") {
+    modal.style.display = "flex";
+  } else {
+    modal.style.display = "none";
+  }
+
+  // Footer logo scroll
+  const footerLogo = document.getElementById("footerLogo");
+  window.addEventListener("scroll", function () {
+    const scrollBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 50;
+
+    footerLogo.classList.toggle("show", scrollBottom);
   });
 
-  window.onload = function () {
-  if (localStorage.getItem("cccLoggedIn") !== "true") {
-    document.getElementById("loginModal").style.display = "block";
-  }
-};
-  if (!localStorage.getItem("cccUsers")) {
-  const users = [
-    { username: "student1", password: "1234" },
-    { username: "student2", password: "abcd" },
-    { username: "student3", password: "1111" },
-    { username: "admin", password: "admin123" }
-  ];
-  localStorage.setItem("cccUsers", JSON.stringify(users));
-}
+});
+
+/* ---------- Login ---------- */
 function login() {
   const user = document.getElementById("username").value.trim();
   const pass = document.getElementById("password").value.trim();
@@ -139,19 +156,23 @@ function login() {
     msg.innerText = "Login successful!";
 
     setTimeout(() => {
-      document.getElementById("loginModal").style.display = "none";
+      location.reload();   // 🔥 IMPORTANT FIX
     }, 800);
+
   } else {
     msg.style.color = "red";
     msg.innerText = "Invalid username or password";
   }
 }
 
+/* ---------- Logout ---------- */
 function logout() {
   localStorage.removeItem("cccLoggedIn");
   localStorage.removeItem("cccUser");
   location.reload();
 }
 </script>
+
+
 </body>
 </html>
